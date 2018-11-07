@@ -6,6 +6,9 @@ Myapp::Application.routes.draw do
   root 'welcome#index'
   
   get 'about', to: 'welcome#about'
+  get 'index', to: 'welcome#index'
+  get 'products', to: 'welcome#products'
+  get 'store', to: 'welcome#store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

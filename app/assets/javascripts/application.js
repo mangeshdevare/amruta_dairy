@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(function(){
+    var current = location.pathname;
+    $('li.nav-item a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href') == current){
+            $this.parents('.nav-item').addClass('active');
+        }
+    });
+});
